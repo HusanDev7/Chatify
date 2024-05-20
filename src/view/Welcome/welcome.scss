@@ -1,0 +1,51 @@
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100%;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    color: #000;
+    margin-top: 50px;
+  }
+
+  &__txt {
+    width: 373px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    margin-top: 8px;
+
+    & span {
+      color: #0f4eae;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 34px;
+  }
+
+  &__link {
+    padding: 20px 6px;
+    width: 100%;
+  }
+}

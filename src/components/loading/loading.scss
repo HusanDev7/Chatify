@@ -1,0 +1,33 @@
+.loading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100%;
+    background: #fff;
+    z-index: 9999999;
+
+    &-img {
+        width: 210px;
+        height: 210px;
+        cursor: pointer;
+    }
+
+    &-rotate {
+        margin-top: 100px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: solid 7px rgba(49, 196, 141, 0.33);
+        border-left-color: #31c48d;
+        animation: spin 1s linear infinite;
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

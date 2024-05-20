@@ -1,0 +1,14 @@
+// import commmon.scss styles
+@import "./common.scss";
+// import commmon.scss styles
+
+// components styles here
+@import "@/components/loading/loading.scss";
+@import "@/components/Buttons/PrimaryButton.vue/primaryButton.scss";
+// components styles here
+
+// views styles here
+@import "@/view/AuthView/authView.scss";
+@import "@/view/Welcome/welcome.scss";
+@import "@/view/SignIn/signInView.scss";
+// views styles here

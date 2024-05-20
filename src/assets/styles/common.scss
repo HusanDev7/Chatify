@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+ul li {
+    list-style: none;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button,
+input,
+textarea {
+    outline: none;
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: auto;
+    object-fit: contain;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

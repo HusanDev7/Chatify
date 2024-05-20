@@ -1,0 +1,117 @@
+.signUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    color: #000;
+    margin-top: 45px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  &__txt {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    margin-left: 15px;
+    padding: 10px 0;
+  }
+
+  &__inp {
+    font-weight: 600;
+    font-size: 13px;
+    color: #000;
+    opacity: 0.38;
+    border: 1px solid #fee;
+    border-radius: 26px;
+    width: 332px;
+    height: 50px;
+    background: #f0f0f0;
+    display: flex;
+    padding: 0 20px;
+  }
+
+  &__remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 26px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  &__rem {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+  }
+  &__check {
+    cursor: pointer;
+    border: 7px solid #31c48d;
+    border-radius: 2px;
+    width: 17px;
+    height: 17px;
+    position: relative;
+  }
+
+  &__check::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    display: none;
+  }
+
+  &__check:checked::after {
+    display: block;
+  }
+
+  &__check:checked {
+    background: #31c48d;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  &__did {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+    gap: 5px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    color: #31c48d;
+  }
+}
