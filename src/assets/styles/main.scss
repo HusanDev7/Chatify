@@ -4,11 +4,14 @@
 
 // components styles here
 @import "@/components/loading/loading.scss";
-@import "@/components/Buttons/PrimaryButton.vue/primaryButton.scss";
+@import "@/components/Buttons/PrimaryButton/primaryButton.scss";
+@import "@/components/nullUsers/nullUsers.scss";
 // components styles here
 
 // views styles here
-@import "@/view/AuthView/authView.scss";
-@import "@/view/Welcome/welcome.scss";
-@import "@/view/SignIn/signInView.scss";
+@import "@/view/SignInView/signInView.scss";
+@import "@/view/SignUpView/signUpView.scss";
+@import "@/view/WelcomeView/welcomeView.scss";
+@import "@/view/SearchUsersView/searchUsersView.scss";
+@import "@/view/GroupView/groupView.scss";
 // views styles here

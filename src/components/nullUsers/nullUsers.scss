@@ -1,0 +1,26 @@
+.null-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+
+  &-title {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #31c48d;
+    margin: 34px 0;
+  }
+
+  & img {
+    width: 104px;
+    height: 104px;
+    opacity: 0.5;
+  }
+
+  &-btn {
+    width: 197px;
+    height: 50px;
+  }
+}

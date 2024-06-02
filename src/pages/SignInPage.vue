@@ -1,5 +1,5 @@
 <script setup>
-import SignInView from '@/view/SignIn/SignInView.vue';
+import SignInView from '@/view/SignInView/SignInView.vue';
 </script>
 <template>
   <SignInView />

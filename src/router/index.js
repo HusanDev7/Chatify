@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
-import Welcome from "@/pages/Welcome.vue"
+import Welcome from "@/pages/WelcomePage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,21 +11,26 @@ const router = createRouter({
       component: Welcome
     },
     {
-      path: '/auth',
-      name: 'authPage',
-      component: () => import('@/pages/AuthPage.vue')
+      path: '/sign-in',
+      name: 'sign-in',
+      component: () => import('@/pages/SignInPage.vue')
     },
     {
       path: '/welcome',
       name: 'welcomePage',
-      component: () => import('@/pages/Welcome.vue')
+      component: () => import('@/pages/WelcomePage.vue')
     },
     {
-      path: '/sign-in',
-      name: 'sign-in',
-      component: () => import('@/pages/SignIn.vue')
+      path: '/sign-up',
+      name: 'SignUpPage',
+      component: () => import('@/pages/SignUpPage.vue')
+    },
+    {
+      path: '/users',
+      name: "SearchUsersPage",
+      component: () => import('@/pages/SearchUsersPage.vue')
     }
   ]
-})
+});
 
-export default router
+export default router;

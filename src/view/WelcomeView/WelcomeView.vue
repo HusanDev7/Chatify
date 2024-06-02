@@ -1,5 +1,5 @@
 <script setup>
-import PrimaryButton from "@/components/Buttons/PrimaryButton.vue/PrimaryButton.vue"
+import PrimaryButton from "@/components/Buttons/PrimaryButton/PrimaryButton.vue"
 </script>
 <template>
   <div class="container">
@@ -9,7 +9,7 @@ import PrimaryButton from "@/components/Buttons/PrimaryButton.vue/PrimaryButton.
         <h2 class="welcome__title">Welcome to Chatify</h2>
         <p class="welcome__txt">Read our <span>Privacy Policy.</span> Tap “Agree and Continue” to accept <span>Terms of
             Services.</span></p>
-        <RouterLink to="/auth" class="welcome__link">
+        <RouterLink to="/sign-in" class="welcome__link">
           <PrimaryButton class="welcome__btn" title="Agree and Continue" />
         </RouterLink>
       </div>
