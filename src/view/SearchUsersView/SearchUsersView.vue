@@ -1,12 +1,20 @@
-  <script setup>
+<script setup>
 import { data } from "@/db";
 import NullUsers from "@/components/nullUsers/NullUsers.vue";
 import Profile from "@/components/profile/Profile.vue";
 import { ref } from "vue";
 
-const date = new Date();
-const hours = date.getHours();
-const minute = date.getMinutes();
+const hours = ref("")
+const minute = ref("")
+
+
+const time = () => {
+  const date = new Date();
+  hours.value = (date.getHours());
+  minute.value = (date.getMinutes());
+}
+
+setInterval(() => time(), 1000)
 
 const chats = [
   { name: "Chats" },
@@ -15,11 +23,18 @@ const chats = [
   { name: "Calls" },
 ];
 
+
 const active = ref(0);
+
+let dote = ref(false)
+const toggleDote = () => {
+  dote.value = !dote.value
+}
 
 const toggle = (index) => {
   active.value = index;
 };
+
 </script>
 <template>
   <div class="container">
@@ -29,20 +44,15 @@ const toggle = (index) => {
       </div>
       <div class="search-users-box2">
         <img src="@/assets//img/search-logo.svg" alt="" />
-        <img src="@/assets/img/threeDote-logo.svg" alt="" />
+        <img @click="toggleDote" src="@/assets/img/threeDote-logo.svg" alt="" />
       </div>
-      <Profile />
+      <Profile v-if="dote" />
     </div>
 
     <div class="sellect-chat">
       <ul class="sellect-chat-list">
-        <li
-          class="sellect-chat-list-item"
-          @click="toggle(index)"
-          :class="{ active: active === index }"
-          v-for="(item, index) in chats"
-          :key="item.name"
-        >
+        <li class="sellect-chat-list-item" @click="toggle(index)" :class="{ active: active === index }"
+          v-for="(item, index) in chats" :key="item.name">
           {{ item.name }}
         </li>
       </ul>

@@ -29,7 +29,7 @@ const router = createRouter({
       path: '/users',
       name: "SearchUsersPage",
       component: () => import('@/pages/SearchUsersPage.vue')
-    }
+    },
   ]
 });
 
