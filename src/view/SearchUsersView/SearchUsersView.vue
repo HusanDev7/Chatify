@@ -4,17 +4,16 @@ import NullUsers from "@/components/nullUsers/NullUsers.vue";
 import Profile from "@/components/profile/Profile.vue";
 import { ref } from "vue";
 
-const hours = ref("")
-const minute = ref("")
-
+const hours = ref("");
+const minute = ref("");
 
 const time = () => {
   const date = new Date();
-  hours.value = (date.getHours());
-  minute.value = (date.getMinutes());
-}
+  hours.value = date.getHours();
+  minute.value = date.getMinutes();
+};
 
-setInterval(() => time(), 1000)
+setInterval(() => time(), 1000);
 
 const chats = [
   { name: "Chats" },
@@ -23,19 +22,19 @@ const chats = [
   { name: "Calls" },
 ];
 
-
 const active = ref(0);
 
-let dote = ref(false)
+let dote = ref(false);
 const toggleDote = () => {
-  dote.value = !dote.value
-}
+  dote.value = !dote.value;
+};
 
 const toggle = (index) => {
   active.value = index;
 };
 
 </script>
+
 <template>
   <div class="container">
     <div class="search-users">
@@ -46,13 +45,20 @@ const toggle = (index) => {
         <img src="@/assets//img/search-logo.svg" alt="" />
         <img @click="toggleDote" src="@/assets/img/threeDote-logo.svg" alt="" />
       </div>
-      <Profile v-if="dote" />
+      <transition name="slide-fade">
+        <Profile v-if="dote" :dote="dote" :toggleDote="toggleDote" />
+      </transition>
     </div>
 
     <div class="sellect-chat">
       <ul class="sellect-chat-list">
-        <li class="sellect-chat-list-item" @click="toggle(index)" :class="{ active: active === index }"
-          v-for="(item, index) in chats" :key="item.name">
+        <li
+          class="sellect-chat-list-item"
+          @click="toggle(index)"
+          :class="{ active: active === index }"
+          v-for="(item, index) in chats"
+          :key="item.name"
+        >
           {{ item.name }}
         </li>
       </ul>
